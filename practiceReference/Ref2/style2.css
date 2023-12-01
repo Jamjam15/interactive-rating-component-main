@@ -1,0 +1,39 @@
+.submit {
+    width: 100px; /* Adjust width as needed */
+    height: 40px;
+    border: none;
+    color: black;
+    background-color: yellow;
+    margin-top: 25px;
+    border-radius: 20px; /* Half of the button's height to create semi-circles on each side */
+  
+    /* Positioning for semi-circle shapes */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Pseudo-elements for left and right semi-circle shapes */
+  .submit::before,
+  .submit::after {
+    content: '';
+    position: absolute;
+    width: 40px; /* Adjust size as needed */
+    height: 80px; /* Double the button's height to form semi-circles */
+    background-color: yellow; /* Same as button background */
+    border-radius: 50%;
+  }
+  
+  /* Left semi-circle */
+  .submit::before {
+    top: 50%;
+    left: -20px; /* Half of the semi-circle width */
+    transform: translateY(-50%);
+  }
+  
+  /* Right semi-circle */
+  .submit::after {
+    top: 50%;
+    right: -20px; /* Half of the semi-circle width */
+    transform: translateY(-50%);
+  }
+  
